@@ -9,7 +9,7 @@
 
 <body>
 <?php echo $this->session->flashdata('message'); ?>
-    <form action="<?= base_url('index.php/Con_Auth/registration'); ?>" method="post">
+    <form action="<?= base_url('Con_Auth/registration'); ?>" method="post">
         <label for="name">Name</label>
         <input type="text" name="name" value="<?= set_value('name'); ?>">
 
@@ -29,7 +29,7 @@
         <input type="password" name="password2">
         <br>
         <button type="submit">REGISTER</button>
-        <p>You Have Account ? <a href="<?= base_url('index.php/Con_Auth'); ?>">Klik Here to LOGIN</a> </p>
+        <p>You Have Account ? <a href="<?= base_url('Con_Auth'); ?>">Klik Here to LOGIN</a> </p>
     </form>
 </body>
 

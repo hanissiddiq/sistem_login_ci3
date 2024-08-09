@@ -50,21 +50,21 @@ class Con_Auth extends CI_Controller
                     //end set data session
                     
                     //alihkan ke kontroler user atau view user
-                    redirect('index.php/Con_User');
+                    redirect('Con_User');
                 }else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password Salah!</div>');
-                    redirect('index.php/Con_Auth');
+                    redirect('Con_Auth');
                 }
                 
             }else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Email tersebut belum di Aktifkan. Silakan cek inbox email !</div>');
-            redirect('index.php/Con_Auth');
+            redirect('Con_Auth');
             }
 
         }
         else{
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Email tersebut belum terdaftar !</div>');
-            redirect('index.php/Con_Auth');
+            redirect('Con_Auth');
         }
         
     }
@@ -105,7 +105,7 @@ class Con_Auth extends CI_Controller
 
             $this->db->insert('user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Akun Berhasil Dibuat!. Silakan Login!</div>');
-            redirect('index.php/Con_Auth');
+            redirect('Con_Auth');
             //echo "User Berhasil di Daftarkan";
         }
     }
@@ -115,7 +115,7 @@ class Con_Auth extends CI_Controller
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Berhasil Logout!</div>');
-        redirect('index.php/Con_Auth');
+        redirect('Con_Auth');
 
     }
 }

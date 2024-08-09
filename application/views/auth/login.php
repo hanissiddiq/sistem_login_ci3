@@ -1,5 +1,5 @@
 <?php echo $this->session->flashdata('message'); ?>
-<form action="<?= base_url('index.php/Con_Auth'); ?>" method="post">
+<form action="<?= base_url('Con_Auth'); ?>" method="post">
 
     <label for="email">E-mail</label>
     <input type="email" name="email" value="<?= set_value('email'); ?>">
@@ -11,4 +11,4 @@
     <br>
     <button>LOGIN</button>
 </form>
-<p>You Don't Have Account ? <a href="<?= base_url('index.php/Con_Auth/registration'); ?>">Klik Here to REGISTER</a> </p>
+<p>You Don't Have Account ? <a href="<?= base_url('Con_Auth/registration'); ?>">Klik Here to REGISTER</a> </p>
