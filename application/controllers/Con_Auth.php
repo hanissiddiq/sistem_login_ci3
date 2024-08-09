@@ -50,7 +50,7 @@ class Con_Auth extends CI_Controller
                     //end set data session
                     
                     //alihkan ke kontroler user atau view user
-                    redirect('Con_User');
+                    redirect('index.php/Con_User');
                 }else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password Salah!</div>');
                     redirect('index.php/Con_Auth');
